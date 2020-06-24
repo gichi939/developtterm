@@ -11,4 +11,10 @@ class DevelopController extends Controller
     {
         return view('admin.develop.create');
     }
+    
+    public function create(Request $request)
+  {
+      // admin/news/createにリダイレクトする
+      return redirect('admin/news/create');
+  }
 }

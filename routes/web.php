@@ -10,8 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('develop/create', 'Admin\DevelopController@add')->middleware('auth');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+     Route::get('develop/create', 'Admin\DevelopController@add');
+     Route::post('develop/create', 'Admin\DevelopController@create'); 
 });
 
 Route::get('/', function () {
