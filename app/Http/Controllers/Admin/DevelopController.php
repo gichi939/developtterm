@@ -96,14 +96,10 @@ class DevelopController extends Controller
       return redirect('admin/develop/');
   }
   
-  public function edit_redirect()
-  {
-      return redirect('admin/develop');
-  }
   
-//   いいね機能
-  public function favorite_users()
-    {
-            return $this->belongsToMany(User::class,'favorites','movie_id','user_id')->withTimestamps();
-    }
+// //   いいね機能
+//   public function favorite_users()
+//     {
+//             return $this->belongsToMany(User::class,'favorites','movie_id','user_id')->withTimestamps();
+//     }
 }

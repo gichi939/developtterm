@@ -47,6 +47,10 @@
                         <ul class="navbar-nav mr-100px">
                             <li><a class="nav-link" href="{{ action('Admin\DevelopController@add') }}">{{ __('新規作成') }}</a></li>
                         </ul>
+                        
+                        <ul class="navbar-nav mr-100">
+                            <li><a class="nav-link" href="{{ action('Admin\DevelopController@index') }}">{{ __('一覧画面') }}</a></li>
+                        </ul>
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">

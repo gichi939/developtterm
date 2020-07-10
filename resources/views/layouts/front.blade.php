@@ -49,7 +49,7 @@
                         </ul>
                         
                         <ul class="navbar-nav mr-100">
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('編集画面') }}</a></li>
+                            <li><a class="nav-link" href="{{ action('Admin\DevelopController@index') }}">{{ __('一覧画面') }}</a></li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->

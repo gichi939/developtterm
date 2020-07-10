@@ -13,9 +13,9 @@ class Develop extends Model
         'body' => 'required',
     );
     
-    public function favorite_users()
-    {
-            return $this->belongsToMany(User::class,'favorites','movie_id','user_id')->withTimestamps();
-    }
+    // public function favorite_users()
+    // {
+    //         return $this->belongsToMany(User::class,'favorites','movie_id','user_id')->withTimestamps();
+    // }
 }
 
