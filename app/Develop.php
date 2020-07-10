@@ -12,4 +12,10 @@ class Develop extends Model
         'prefectures' => 'required',
         'body' => 'required',
     );
+    
+    public function favorite_users()
+    {
+            return $this->belongsToMany(User::class,'favorites','movie_id','user_id')->withTimestamps();
+    }
 }
+

@@ -29,3 +29,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'NewsController@index');
 
+Route::group(['middleware'=>'auth'],function(){
+    Route::group(['prefix'=>'movies/{id}'],function(){
+       Route::post('favorite','FavoriteController@store')->name('favorites.favorite');
+       Route::delete('unfavorite','FavoriteController@destroy')->name('favorites.unfavorite');
+    });
+});
+

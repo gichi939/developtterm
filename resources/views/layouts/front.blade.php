@@ -40,8 +40,16 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav mr-100">
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('会員登録') }}</a></li>
+                        </ul>
+                        
+                        <ul class="navbar-nav mr-100px">
+                            <li><a class="nav-link" href="{{ action('Admin\DevelopController@add') }}">{{ __('新規作成') }}</a></li>
+                        </ul>
+                        
+                        <ul class="navbar-nav mr-100">
+                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('編集画面') }}</a></li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->

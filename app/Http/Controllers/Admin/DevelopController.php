@@ -37,7 +37,7 @@ class DevelopController extends Controller
         $develop->fill($form);
         $develop->save();
 
-        return redirect('admin/develop/create');
+        return redirect('admin/develop');
   }
   
   public function index(Request $request)
@@ -95,4 +95,15 @@ class DevelopController extends Controller
       $develop->delete();
       return redirect('admin/develop/');
   }
+  
+  public function edit_redirect()
+  {
+      return redirect('admin/develop');
+  }
+  
+//   いいね機能
+  public function favorite_users()
+    {
+            return $this->belongsToMany(User::class,'favorites','movie_id','user_id')->withTimestamps();
+    }
 }

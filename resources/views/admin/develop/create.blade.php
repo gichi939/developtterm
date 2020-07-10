@@ -5,6 +5,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
+                
+                <!--いいね機能-->
+    @if (Auth::id() != $user->id)
+
+    @if (Auth::user()->is_favorite($movie->id))
+
+        {!! Form::open(['route' => ['favorites.unfavorite', $movie->id], 'method' => 'delete']) !!}
+            {!! Form::submit('いいね！を外す', ['class' => "button btn btn-warning"]) !!}
+        {!! Form::close() !!}
+
+    @else
+
+        {!! Form::open(['route' => ['favorites.favorite', $movie->id]]) !!}
+            {!! Form::submit('いいね！を付ける', ['class' => "button btn btn-success"]) !!}
+        {!! Form::close() !!}
+
+    @endif
+
+    @endif
+
                 <h2>ニュース新規作成</h2>
                 <form action="{{ action('Admin\DevelopController@create') }}" method="post" enctype="multipart/form-data">
 
